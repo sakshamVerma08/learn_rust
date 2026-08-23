@@ -3,12 +3,12 @@ use std::io;
 
 fn main(){
 
-    celsius_to_fahrenheit();
-    fahrenheit_to_celsius();
+    simple_interest_calc();   
+
 }
 
 
-fn celsius_to_fahrenheit(){
+fn _celsius_to_fahrenheit(){
 
    let mut temp = String::new(); // defining a new string var to hold user's input value
     
@@ -35,7 +35,50 @@ fn celsius_to_fahrenheit(){
 }
 
 
-fn fahrenheit_to_celsius(){
+fn simple_interest_calc(){
+
+
+    let mut principal = String::new();
+    let mut roi = String::new();
+    let mut time_in_years = String::new();
+    
+    println!("Enter Principal Amount:");
+    io::stdin()
+        .read_line(&mut principal)
+        .expect("Enter a valid type for the Principal amount");
+    
+    
+    println!("Enter rate of interest:");
+    io::stdin()
+        .read_line(&mut roi)
+        .expect("Enter a valid type for rate of interest");
+    
+    println!("Enter the time (in years):");
+    io::stdin()
+        .read_line(&mut time_in_years)
+        .expect("Enter a valid time");
+
+
+    let principal: i32 = principal.trim().parse().expect("Invalid principal amount entered");
+    let principal: f64 = f64::from(principal);
+    
+
+    let roi: i32 = roi.trim().parse().expect("invalid roi entered");
+    let roi: f64 = f64::from(roi);
+    
+    let time_in_years: i32 = time_in_years.trim().parse().expect("Invalid time entered");
+    let time_in_years: f64 = f64::from(time_in_years);
+
+    let output: f64 = (principal * roi * time_in_years)/100.0;
+
+    println!("Simple Interest = {}", output);
+
+}
+
+
+
+
+fn _fahrenheit_to_celsius(){
 
     let mut input = String::new();
 
