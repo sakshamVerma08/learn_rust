@@ -1,14 +1,16 @@
-fn main(){
-    println!("Trying to use functions in rust");
+fn five()-> i32 {
     
-    let y = {
-
-        let a : i32 = 22;
-        a/2
-    };
-
-    println!("value of y = {}",y);
+    5
 }
 
+fn plus_one(x:i32)->i32 {
 
+    x+1;
 
+}
+
+fn main(){
+
+    let x = plus_one(5);
+    println!("The value of x is {}",x);
+}
