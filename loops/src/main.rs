@@ -1,16 +1,17 @@
 fn main(){
 
-    let mut counter = 0;
+    let mut count: u32 = 0;
+    
+    println!("Counting until 30");
 
-    let res = loop{
-        counter += 1;
+    loop {
 
-        if counter == 10{
-            break counter *2;
+        if count == 30{
+            break;
         }
-    };
 
-    println!("The result of loop = {}",res);
+        count+=1;
+    }
 
-
+    println!("Value of count = {}", count);
 }

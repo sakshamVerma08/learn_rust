@@ -1,0 +1,5 @@
+This is a test file.
+We are building a grep clone in Rust.
+Rust is fast and safe.
+It uses clap for parsing.
+Clap makes CLI building easy.
