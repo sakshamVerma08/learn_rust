@@ -1,12 +1,17 @@
 fn main(){
-    let mut s = String::from("Hello");
+    
+    let mut s1 = String::from("NeoVim Motions are amazing !!");
+    
+    // immutable references 
+    let i1 = &s1;
+    let i2 = &s1;
+    let i3 = &s1;
 
-    change(&mut s);
-    println!("{s}");
+
+    // mutable reference to the same value : s1
+    let mut_ref: &mut String = &mut s1;
+    println!("i1 = {}", i1);
 }
 
 
-fn change(s: &mut String){
-    s.push_str(" World");
 
-}
